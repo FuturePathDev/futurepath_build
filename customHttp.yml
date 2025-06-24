@@ -1,0 +1,37 @@
+version: 1
+httpHeaders:
+  - pattern: "**/*.woff2"
+    headers:
+      - key: "Access-Control-Allow-Origin"
+        value: "*"
+      - key: "Content-Type"
+        value: "font/woff2"
+
+  - pattern: "**/*.woff"
+    headers:
+      - key: "Access-Control-Allow-Origin"
+        value: "*"
+      - key: "Content-Type"
+        value: "font/woff"
+
+  - pattern: "**/*.ttf"
+    headers:
+      - key: "Access-Control-Allow-Origin"
+        value: "*"
+      - key: "Content-Type"
+        value: "font/ttf"
+
+  - pattern: "**/*.css"
+    headers:
+      - key: "Cache-Control"
+        value: "max-age=86400"
+
+  - pattern: "**/*.js"
+    headers:
+      - key: "Cache-Control"
+        value: "max-age=86400"
+
+  - pattern: "**/*.html"
+    headers:
+      - key: "Cache-Control"
+        value: "no-cache"
